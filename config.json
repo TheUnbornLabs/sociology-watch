@@ -1,0 +1,113 @@
+{
+  "site_title": "Sociology Watch",
+  "site_tagline": "Daily sociology signals from across the internet",
+  "collection": {
+    "polite_delay_seconds": 0.5,
+    "reddit_delay_seconds": 3,
+    "request_timeout_seconds": 20,
+    "reddit_time_window": "week",
+    "max_items_per_feed": 40,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) SociologyWatch/1.0 (+https://github.com/)"
+  },
+  "themes": [
+    {
+      "key": "inequality",
+      "label": "Social Inequality",
+      "color": "#f97316",
+      "subreddits": ["sociology", "inequality"],
+      "queries": {
+        "en": "\"social inequality\"",
+        "es": "\"desigualdad social\"",
+        "de": "\"soziale Ungleichheit\"",
+        "fr": "\"inégalités sociales\"",
+        "pt": "\"desigualdade social\"",
+        "ja": "社会的不平等"
+      }
+    },
+    {
+      "key": "race",
+      "label": "Race & Ethnicity",
+      "color": "#a78bfa",
+      "subreddits": ["racism", "Ethnicity"],
+      "queries": {
+        "en": "\"race and ethnicity\" society",
+        "es": "\"raza y etnia\" sociedad",
+        "de": "\"Rassismus und Ethnizität\" Gesellschaft",
+        "fr": "\"race et ethnicité\" société",
+        "pt": "\"raça e etnia\" sociedade",
+        "ja": "人種 民族 社会"
+      }
+    },
+    {
+      "key": "gender",
+      "label": "Gender & Sexuality",
+      "color": "#ec4899",
+      "subreddits": ["AskFeminists", "gender"],
+      "queries": {
+        "en": "\"gender and sexuality\" society",
+        "es": "\"género y sexualidad\" sociedad",
+        "de": "\"Geschlecht und Sexualität\" Gesellschaft",
+        "fr": "\"genre et sexualité\" société",
+        "pt": "\"gênero e sexualidade\" sociedade",
+        "ja": "ジェンダー セクシュアリティ 社会"
+      }
+    },
+    {
+      "key": "labour",
+      "label": "Work & Labour",
+      "color": "#22d3ee",
+      "subreddits": ["WorkReform", "antiwork"],
+      "queries": {
+        "en": "\"work and labour\" sociology OR \"labor sociology\"",
+        "es": "sociología \"trabajo y empleo\"",
+        "de": "Soziologie \"Arbeit und Beschäftigung\"",
+        "fr": "sociologie \"travail et emploi\"",
+        "pt": "sociologia \"trabalho e emprego\"",
+        "ja": "労働 雇用 社会学"
+      }
+    },
+    {
+      "key": "migration",
+      "label": "Migration",
+      "color": "#34d399",
+      "subreddits": ["immigration", "refugees"],
+      "queries": {
+        "en": "migration society sociology",
+        "es": "\"migración\" sociedad sociología",
+        "de": "\"Migration\" Gesellschaft Soziologie",
+        "fr": "\"migration\" société sociologie",
+        "pt": "\"migração\" sociedade sociologia",
+        "ja": "移民 社会 社会学"
+      }
+    },
+    {
+      "key": "movements",
+      "label": "Social Movements",
+      "color": "#facc15",
+      "subreddits": ["activism", "protest"],
+      "queries": {
+        "en": "\"social movements\" protest sociology",
+        "es": "\"movimientos sociales\" protesta sociología",
+        "de": "\"soziale Bewegungen\" Protest Soziologie",
+        "fr": "\"mouvements sociaux\" manifestation sociologie",
+        "pt": "\"movimentos sociais\" protesto sociologia",
+        "ja": "社会運動 抗議 社会学"
+      }
+    }
+  ],
+  "languages": [
+    { "code": "en", "label": "English",    "flag": "🇬🇧", "enabled": true,  "news_edition": { "hl": "en-US", "gl": "US", "ceid": "US:en" } },
+    { "code": "es", "label": "Español",    "flag": "🇪🇸", "enabled": true,  "news_edition": { "hl": "es",    "gl": "ES", "ceid": "ES:es" } },
+    { "code": "de", "label": "Deutsch",    "flag": "🇩🇪", "enabled": true,  "news_edition": { "hl": "de",    "gl": "DE", "ceid": "DE:de" } },
+    { "code": "fr", "label": "Français",   "flag": "🇫🇷", "enabled": true,  "news_edition": { "hl": "fr",    "gl": "FR", "ceid": "FR:fr" } },
+    { "code": "pt", "label": "Português",  "flag": "🇧🇷", "enabled": true,  "news_edition": { "hl": "pt-BR", "gl": "BR", "ceid": "BR:pt-419" } },
+    { "code": "ja", "label": "日本語",      "flag": "🇯🇵", "enabled": true,  "news_edition": { "hl": "ja",    "gl": "JP", "ceid": "JP:ja" } }
+  ],
+  "sources": {
+    "reddit":   { "enabled": true,  "label": "Reddit" },
+    "news":     { "enabled": true,  "label": "News" },
+    "academic": { "enabled": true,  "label": "Academic" },
+    "youtube":  { "enabled": false, "label": "YouTube", "api_key": "" },
+    "twitter":  { "enabled": false, "label": "X / Twitter", "bearer_token": "" }
+  }
+}

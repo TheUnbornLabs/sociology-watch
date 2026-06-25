@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local editor
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# NOTE: data/sociology.db and dashboard.html ARE committed on purpose,
+# so GitHub Pages always serves the latest daily snapshot.

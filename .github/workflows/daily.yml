@@ -1,0 +1,41 @@
+name: Daily Sociology Watch collection
+
+on:
+  schedule:
+    # 06:30 UTC every day. GitHub cron is UTC; adjust if you like.
+    - cron: "30 6 * * *"
+  workflow_dispatch: {}   # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write          # needed to commit refreshed data back
+
+concurrency:
+  group: daily-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the collector (stdlib only, no installs)
+        run: python collect.py
+
+      - name: Commit refreshed data + dashboard
+        run: |
+          git config user.name  "sociology-watch-bot"
+          git config user.email "actions@github.com"
+          git add data/sociology.db dashboard.html index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Daily collection: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
